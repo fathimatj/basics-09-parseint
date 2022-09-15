@@ -2,8 +2,9 @@ const defaultValue = 0;
 let currentValue = defaultValue;
 
 function add() {
-  let calDescription =`${currentValue} + ${userInput.value}`;
-  currentValue = currentValue + parseInt(userInput.value);
+  let getUserInputNumber = parseInt(userInput.value);
+  let calDescription =`${currentValue} + ${getUserInputNumber}`;
+  currentValue = currentValue + getUserInputNumber;
   outputResult(currentValue, calDescription);
 }
 
