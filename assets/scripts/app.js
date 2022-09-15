@@ -1,9 +1,13 @@
 const defaultValue = 0;
 let currentValue = defaultValue;
 
+function getInputNumber() {
+  return parseInt(userInput.value);
+}
+
 function add() {
-  let getUserInputNumber = parseInt(userInput.value);
-  let calDescription =`${currentValue} + ${getUserInputNumber}`;
+  let getUserInputNumber = getInputNumber();
+  let calDescription = `${currentValue} + ${getUserInputNumber}`;
   currentValue = currentValue + getUserInputNumber;
   outputResult(currentValue, calDescription);
 }
@@ -24,5 +28,5 @@ function divide() {
 }
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", sub);
-multiplyBtn.addEventListener("click",multiply);
+multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
