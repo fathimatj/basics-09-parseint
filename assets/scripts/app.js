@@ -2,8 +2,9 @@ const defaultValue = 0;
 let currentValue = defaultValue;
 
 function add() {
+  let calDescription =`${currentValue} + ${userInput.value}`;
   currentValue = currentValue + parseInt(userInput.value);
-  outputResult(currentValue, "This is addition result");
+  outputResult(currentValue, calDescription);
 }
 
 function sub() {
