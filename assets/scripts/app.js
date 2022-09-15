@@ -5,26 +5,55 @@ function getInputNumber() {
   return parseInt(userInput.value);
 }
 
+function getDescription(operator, currentVal, userVal) {
+  return `${currentVal}  ${operator}  ${userVal}`;
+}
 function add() {
   let getUserInputNumber = getInputNumber();
-  let calDescription = `${currentValue} + ${getUserInputNumber}`;
+  let storeCurrentValue = currentValue;
+  let calDescription = getDescription(
+    "+",
+    storeCurrentValue,
+    getUserInputNumber
+  );
   currentValue = currentValue + getUserInputNumber;
   outputResult(currentValue, calDescription);
 }
 
 function sub() {
-  currentValue = currentValue - parseInt(userInput.value);
-  outputResult(currentValue, "This is subtraction result");
+  let getUserInputNumber = getInputNumber();
+  let storeCurrentValue = currentValue;
+  let calDescription = getDescription(
+    "-",
+    storeCurrentValue,
+    getUserInputNumber
+  );
+  currentValue = currentValue - getUserInputNumber;
+  outputResult(currentValue, calDescription);
 }
 
 function multiply() {
-  currentValue = currentValue * parseInt(userInput.value);
-  outputResult(currentValue, "This is multiply result");
+  let getUserInputNumber = getInputNumber();
+  let storeCurrentValue = currentValue;
+  let calDescription = getDescription(
+    "*",
+    storeCurrentValue,
+    getUserInputNumber
+  );
+  currentValue = currentValue * getUserInputNumber;
+  outputResult(currentValue, calDescription);
 }
 
 function divide() {
-  currentValue = currentValue / parseInt(userInput.value);
-  outputResult(currentValue, "This is division result");
+  let getUserInputNumber = getInputNumber();
+  let storeCurrentValue = currentValue;
+  let calDescription = getDescription(
+    "/",
+    storeCurrentValue,
+    getUserInputNumber
+  );
+  currentValue = currentValue / getUserInputNumber;
+  outputResult(currentValue, calDescription);
 }
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", sub);
