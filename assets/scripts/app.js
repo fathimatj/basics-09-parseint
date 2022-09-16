@@ -6,54 +6,80 @@ function getInputNumber() {
 }
 
 function getDescription(operator, currentVal, userVal) {
-  return `${currentVal}  ${operator}  ${userVal}`;
+
+  let calDescription = `${currentVal}  ${operator}  ${userVal}`;
+  outputResult(currentValue, calDescription);
+  // return `${currentVal}  ${operator}  ${userVal}`;
 }
 function add() {
   let getUserInputNumber = getInputNumber();
   let storeCurrentValue = currentValue;
-  let calDescription = getDescription(
+  /* let calDescription = getDescription(
     "+",
     storeCurrentValue,
     getUserInputNumber
-  );
+  ); */
+ 
   currentValue = currentValue + getUserInputNumber;
-  outputResult(currentValue, calDescription);
+  getDescription(
+    "+",
+    storeCurrentValue,
+    getUserInputNumber);
+  // outputResult(currentValue, calDescription);
 }
 
 function sub() {
   let getUserInputNumber = getInputNumber();
   let storeCurrentValue = currentValue;
-  let calDescription = getDescription(
+  /* let calDescription = getDescription(
+    "-",
+    storeCurrentValue,
+    getUserInputNumber
+  ); */
+  
+  currentValue = currentValue - getUserInputNumber;
+  getDescription(
     "-",
     storeCurrentValue,
     getUserInputNumber
   );
-  currentValue = currentValue - getUserInputNumber;
-  outputResult(currentValue, calDescription);
+  // outputResult(currentValue, calDescription);
 }
 
 function multiply() {
   let getUserInputNumber = getInputNumber();
   let storeCurrentValue = currentValue;
-  let calDescription = getDescription(
+  /* let calDescription = getDescription(
+    "*",
+    storeCurrentValue,
+    getUserInputNumber
+  ); */
+  
+  currentValue = currentValue * getUserInputNumber;
+  getDescription(
     "*",
     storeCurrentValue,
     getUserInputNumber
   );
-  currentValue = currentValue * getUserInputNumber;
-  outputResult(currentValue, calDescription);
+  // outputResult(currentValue, calDescription);
 }
 
 function divide() {
   let getUserInputNumber = getInputNumber();
   let storeCurrentValue = currentValue;
-  let calDescription = getDescription(
+  /* let calDescription = getDescription(
+    "/",
+    storeCurrentValue,
+    getUserInputNumber
+  ); */
+  
+  currentValue = currentValue / getUserInputNumber;
+  getDescription(
     "/",
     storeCurrentValue,
     getUserInputNumber
   );
-  currentValue = currentValue / getUserInputNumber;
-  outputResult(currentValue, calDescription);
+  // outputResult(currentValue, calDescription);
 }
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", sub);
